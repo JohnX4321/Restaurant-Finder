@@ -35,12 +35,14 @@ public class Main {
 
        try {
 
+           if(Google_API_KEY==""||Zomato_API_KEY==""||OLA_X_APP_TOKEN==""||OLA_Authorization=="") {
+               System.out.println("The Api Key has not been entered");
+               System.exit(0);
+
+           }
+
            URL url=new URL("https://maps.googleapis.com/maps/api/geocode/json?address="+city+"&key="+Google_API_KEY);
-			if(Google_API_KEY==""||Zomato_API_KEY==""||OLA_X_APP_TOKEN=""||OLA_Authorization=="") {
-				System.out.println("The Api Key has not been entered")
-				System.exit(0);
-			
-			}
+
 
 
 
